@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+/* Reset */
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font: 1.6rem 'Roboto', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    letter-spacing: .1rem;
+    background-color: var(--bgcolor-theme);
+    color: var(--text-color);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    transition: all .6s ease-in-out;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, p, ul, ol {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-weight: normal;
+}
+
+/* Ajouter les images */
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+button, input {
+    padding: 0;
+    background: none;
+    border: 0;
+}
+/* End Reset */
+
+/* Thème */
+:root {
+    color-scheme: light dark; 
+    --bgcolor-theme: #ffffff;
+    --bgcolor-footer: black;
+    --text-color: #000000;
+    --text-color2: #e79120;
+}
+
+.footer {
+    color: var(--bgcolor-footer);
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+
+.navbar {
+    position: absolute;
+    margin: 1rem;
+    background-color: var(--bgcolor-theme);
+}

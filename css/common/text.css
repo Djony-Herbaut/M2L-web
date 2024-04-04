@@ -1,0 +1,9 @@
+@import url("./reset.css");
+
+.black-title{
+    color: var(--text-color) ;
+}
+.gold-title{
+    color: var(--text-color2);
+}
+

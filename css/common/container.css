@@ -1,0 +1,18 @@
+.global-container {
+    display: flex;
+    font-family: 'Roboto' sans-serif;
+    margin: 4rem;
+    background-color: #3d3d3d;
+}
+
+.event-container{
+    flex-wrap: wrap;
+    margin: 2rem;
+    background-color: #b92626;
+}
+
+.top-container {
+    margin: 2rem;
+    padding: 3rem;
+    background-color: #78af1f;
+}
