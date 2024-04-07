@@ -1,0 +1,10 @@
+.button{
+    display: flex;
+    background-color: var(--bgcolor-theme);
+    color: #000000;
+    font-size: 1.8rem;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-weight: 700;
+    width: 18rem;
+}

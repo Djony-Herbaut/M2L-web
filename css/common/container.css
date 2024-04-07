@@ -1,7 +1,6 @@
 .global-container {
     display: flex;
-    font-family: 'Roboto' sans-serif;
-    margin: 4rem;
+    margin: 1.5rem;
     background-color: #3d3d3d;
 }
 
@@ -11,8 +10,4 @@
     background-color: #b92626;
 }
 
-.top-container {
-    margin: 2rem;
-    padding: 3rem;
-    background-color: #78af1f;
-}
+

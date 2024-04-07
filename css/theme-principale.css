@@ -1,0 +1,19 @@
+@import url("./common/container.css");
+@import url("./common/reset.css");
+@import url("./common/button.css");
+@import url("./common/text.css");
+
+.top-container {
+    height: 85rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../asset/Olympic-seine.png");
+    background-size:cover;
+    background-position: center;
+}
+.top-btn-container{
+    display: flex;
+    flex-direction: row;
+}
