@@ -1,13 +1,28 @@
 .global-container {
     display: flex;
-    margin: 1.5rem;
+    min-height: 65rem;
+    margin: .5rem;
     background-color: #3d3d3d;
+}
+.global-container-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.global-container-column{
+    display: flex;
+    flex-direction: column;
 }
 
 .event-container{
-    flex-wrap: wrap;
-    margin: 2rem;
+    min-width: 50rem;
+    margin: 5rem;
     background-color: #b92626;
 }
-
+.foot-container{
+    display: flex;
+    height: 20rem;
+    background-color: var(--bgcolor-theme);
+    width: 20rem;
+}
 

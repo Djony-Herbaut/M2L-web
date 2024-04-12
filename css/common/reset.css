@@ -55,7 +55,14 @@ button, input {
     color: var(--bgcolor-footer);
     display: flex;
     flex-direction:row;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+.foot-img{
+    width:17.5rem;
+}
+.foot-link{
+    font-size: 2rem;
+    display: flex;
 }
 
 .navbar {
@@ -83,7 +90,7 @@ button, input {
     justify-content:flex-start;
 }
 .nav-img{
-    width: 13rem;
+    width: 10rem;
 }
 .list-menu-nav{
     margin: .5rem;
