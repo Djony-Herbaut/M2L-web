@@ -12,6 +12,7 @@
     border: solid 0.25rem;
     transition: 0.9s;
     align-items: center;
+    align-self: center;
 }
 
 .gold-round-button{
@@ -27,7 +28,8 @@
 }
 
 .gold-round-button:hover{
-    background-color: var(--bgcolor-theme);
+    background-color: var(--bgcolor-footer);
+    color: var(--text-color2);
     
 }
 

@@ -55,13 +55,13 @@ button, input {
     color: var(--bgcolor-footer);
     display: flex;
     flex-direction:row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .foot-img{
-    width:17.5rem;
+    width:17rem;
 }
 .foot-link{
-    font-size: 2rem;
+    font-size: 2.5rem;
     display: flex;
 }
 
@@ -81,7 +81,7 @@ button, input {
     align-items: center;
 }
 .nav-title{
-    margin: 1rem;
+    margin: 1.5rem;
     font-size: 1.95rem;
     font-weight:bold;
     font-style: italic;
@@ -94,8 +94,14 @@ button, input {
 }
 .list-menu-nav{
     margin: .5rem;
+    max-width: 20rem;
 }
 .link-menu-nav{
     color: var(--text-color);
     font-weight: bold;
+    transition: 0.9s;
+}
+.link-menu-nav:hover{
+    color: var(--text-color2);
+    
 }

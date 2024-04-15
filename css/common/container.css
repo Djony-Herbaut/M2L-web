@@ -1,8 +1,8 @@
 .global-container {
     display: flex;
-    min-height: 65rem;
-    margin: .5rem;
-    background-color: #3d3d3d;
+    min-height: 85rem;
+    margin: .8rem;
+
 }
 .global-container-row{
     display: flex;
@@ -12,11 +12,13 @@
 .global-container-column{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 
 .event-container{
-    min-width: 50rem;
-    margin: 5rem;
+    display: flex;
+    width: 50rem;
+    margin: 1rem;
     background-color: #b92626;
 }
 .foot-container{
