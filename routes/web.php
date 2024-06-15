@@ -35,3 +35,4 @@ require __DIR__.'/auth.php';
 
 Route::resource('events', \App\Http\Controllers\EventController::class);
 Route::get('/events', [EventController::class, 'index'])->name('events.event');
+Route::get('/events/create', [EventController::class, 'create'])->name('events.create');

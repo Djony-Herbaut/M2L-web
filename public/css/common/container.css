@@ -28,5 +28,6 @@
     height: 20rem;
     background-color: var(--bgcolor-theme);
     width: 20rem;
+    flex-direction: column-reverse;
 }
 

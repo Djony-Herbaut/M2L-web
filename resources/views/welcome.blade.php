@@ -73,7 +73,7 @@
                 @auth
                     <a class="button gold-round-button" href="{{ url('/events') }}" itemprop="url">Découvrir tous les évènements &#x2794; </a>
                 @else
-                    <a class="button gold-round-button" href="{{ url('/login') }}" itemprop="url">Découvrir tous les évènements &#x2794; </a>
+                    <a class="button gold-round-button" href="{{ url('/register') }}" itemprop="url">Découvrir tous les évènements &#x2794; </a>
                 @endauth
             </section>
     

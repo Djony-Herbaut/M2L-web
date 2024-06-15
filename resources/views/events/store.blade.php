@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="{{url('/css/common/button.css')}}">
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
@@ -12,9 +12,9 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     @csrf
                     Votre poste a bien été publié !
-                    
                 </div>
             </div>
+            <a class="button default-round-button" href="{{ url('/dashboard') }}" itemprop="url"> Revenir en arrière </a>
         </div>
     </div>
 </x-app-layout>
