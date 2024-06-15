@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,3 +34,4 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 Route::resource('events', \App\Http\Controllers\EventController::class);
+Route::get('/events', [EventController::class, 'index'])->name('events.event');

@@ -24,7 +24,7 @@
                     des Jeux Olympiques
                 </h2>
                 
-                <a href="./index.html" itemprop="url" >
+                <a href="{{ url('/') }}" itemprop="url" >
                     <img src="{{asset('img/paris2024_logo_v2.gif')}}" class="nav-img" alt="icon-navbar" loading="lazy" itemprop="image">
                 </a>
                 @if (Route::has('login'))
@@ -45,8 +45,12 @@
             <section class="top-container">
                 <h2 class="title"> Découvrez tous les Sports</h2>
                 <div class="top-btn-container">
-                    <a class="button default-round-button" href="./connexion-membre.html" itemprop="url">Postez vos évènements !</a>
-                    <a class="button default-round-button" href="#" itemprop="url">Tous les évènements</a>
+                    <a class="button default-round-button" href="{{ route('register') }}" itemprop="url">Postez vos évènements !</a>
+                    @if (Auth::check())
+                        <a class="button default-round-button" href="{{ url('/events') }}" itemprop="url">Tous les évènements</a>
+                    @else
+                        <a class="button default-round-button" href="{{ url('/login') }}" itemprop="url">Tous les évènements</a>
+                    @endif
                 </div>
             </section>
     
@@ -66,7 +70,11 @@
                     Rejoignez-nous dès maintenant et plongez dans une communauté vibrante, où chaque participant, chaque émotion et chaque victoire compte. 
                     Parce que sur notre plateforme, le sport n'est pas seulement une activité, c'est un mode de vie. 🌟<br><br>
                 </p>
-                <a class="button gold-round-button" href="#" itemprop="url">Découvrir tous les évènements &#x2794; </a>
+                @auth
+                    <a class="button gold-round-button" href="{{ url('/events') }}" itemprop="url">Découvrir tous les évènements &#x2794; </a>
+                @else
+                    <a class="button gold-round-button" href="{{ url('/login') }}" itemprop="url">Découvrir tous les évènements &#x2794; </a>
+                @endauth
             </section>
     
             <section class="global-container global-container-column">
@@ -75,7 +83,7 @@
                     <img src="{{asset('img/Point_rassemblement_JO.png')}}" class="meet-point-JO" alt="Photo des du lieu de déroulements des épreuves des JO" 
                     loading="lazy" itemprop="image">
                 </h2>
-                <a class="button gold-round-button" href="#" itemprop="url">Inscrivez-vous et postez votre première évènement &#x2794; </a> 
+                <a class="button gold-round-button" href="{{ route('login') }}" itemprop="url">Inscrivez-vous et postez votre première évènement &#x2794; </a> 
             </section>
         </main>
     </body>

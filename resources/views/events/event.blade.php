@@ -13,7 +13,7 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <h2>{{ $event->title }}</h2>
                     <p>{{ $event->description }}</p>
-                    <img src="{{ Storage::disk('public')->url($event->cover) }}" alt="Image de l'événement">
+                    <img src="{{ asset('storage/' . $event->cover) }}" alt="Image de l'événement">
                 </div>
                 @endforeach
             </div>
