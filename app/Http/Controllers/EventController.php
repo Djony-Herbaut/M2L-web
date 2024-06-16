@@ -59,7 +59,7 @@ class EventController extends Controller
      */
     public function edit(Event $event)
     {
-        //
+        return view('events.edit', compact('event'));
     }
 
     /**
@@ -67,7 +67,22 @@ class EventController extends Controller
      */
     public function update(Request $request, Event $event)
     {
-        //
+        $request->validate([
+            'title' => 'required|string',
+            'description' => 'required|string',
+            'cover' => 'nullable|image'
+        ]);
+
+        $event->title = $request->title;
+        $event->description = $request->description;
+        
+        if ($request->hasFile('cover')) {
+            $event->cover = $request->cover->store('images', 'public');
+        }
+
+        $event->save();
+
+        return redirect()->route('events.show', $event)->with('success', 'Event updated successfully.');
     }
 
     /**
@@ -75,6 +90,7 @@ class EventController extends Controller
      */
     public function destroy(Event $event)
     {
-        //
+        $event->delete();
+        return redirect()->route('events.event')->with('success', 'Event deleted successfully.');
     }
 }
