@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
     @csrf
-    @foreach($events as $event)
+    @foreach(collect($events)->reverse() as $event)
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
@@ -19,14 +19,14 @@
                             Afficher
                         </a>
 
-                        @if(Auth::check() && (Auth::id() == $event->user_id || Auth::user()->is_admin))
+                        @if(Auth::user()->is_admin)
                         <a href="{{ route('events.edit', $event->id) }}" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded inline-block" style="background-color: #b37b33; margin: 1rem;">
                             Éditer
                         </a>
                         @endif
                     </div>
 
-                    @if(Auth::check() && (Auth::id() == $event->user_id || Auth::user()->is_admin))
+                    @if(Auth::user()->is_admin)
                     <form action="{{ route('events.destroy', $event->id) }}" method="POST" class="inline-block mt-4">
                         @csrf
                         @method('DELETE')
